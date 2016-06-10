@@ -1,5 +1,6 @@
 TODOS:
 
+- make readme more comprehensive and complete
 - create remote
 - write issues in gherkin
 - setup env
@@ -11,3 +12,5 @@ TODOS:
 feature ideas (unrequested as of yet)
 
 - group links
+- pluggable styles
+- symfony branch with routing, classes and templates
