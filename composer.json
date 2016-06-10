@@ -1,14 +1,14 @@
 {
-    "name": "buddy/dashpit",
+    "name": "discipolo/dashpit",
     "description": "dashboard for links",
     "require": {
         "symfony/yaml": "^3.1",
-        "friendly/dashpit_composer": "dev-master",
+        "friendly/dashpit_library": "dev-master",
         "twig/twig": "~1.0"
     },
     "repositories": [{
         "type": "vcs",
-        "url": "/mnt/MODATA/05-START/experiments/dashpit/_CODENV/_WORCLONES/dashpit_composer"
+        "url": "https://github.com/discipolo/dashpit_library.git"
     }],
     "config": {
         "bin-dir": "bin/"
