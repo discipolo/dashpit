@@ -8,6 +8,8 @@ TODOS:
 - document usage (guide)
 - decide on branching and release workflow (developer docu)
 - share (publish) code
+- # make sure to autoload http://phpenthusiast.com/blog/how-to-autoload-with-composer
+
 
 feature ideas (unrequested as of yet)
 
