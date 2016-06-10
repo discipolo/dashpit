@@ -1,5 +1,5 @@
 # dashpit link page
-
+ +[![Stories in Ready](https://badge.waffle.io/discipolo/dashpit.png?label=ready&title=Ready)](https://waffle.io/discipolo/dashpit)
 will show a list of links
 
 ## requirements:
