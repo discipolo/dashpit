@@ -1,0 +1,7 @@
+{
+    "name": "buddy/dashpit",
+    "description": "dashboard for links",
+    "require": {
+        "symfony/yaml": "^3.1"
+    }
+}
