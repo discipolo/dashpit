@@ -1,0 +1,22 @@
+{
+  "name": "dashpit",
+  "version": "0.0.2",
+  "description": "main dashpit repo",
+  "main": "index.php",
+  "scripts": {
+    "test": "bin/behat"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/discipolo/dashpit.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/discipolo/dashpit/issues"
+  },
+  "homepage": "https://github.com/discipolo/dashpit#readme",
+  "dependencies": {
+    "dashpit-foundation-theme": "git@github.com:discipolo/dashpit_foundation_theme.git"
+  }
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ sitename }}</title>
+</head>
+<body>
+<ul id="linklist">
+    {% for item in linklist %}
+    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+    {% endfor %}
+</ul>
+
+<h1>{{ sitename }}</h1>
+
+
+
+
+</body>
+</html>

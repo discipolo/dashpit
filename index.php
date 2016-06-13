@@ -1,31 +1,33 @@
 
 <?php
-//https://getcomposer.org/doc/01-basic-usage.md#autoloading
+// Autoload dependencies
+// https://getcomposer.org/doc/01-basic-usage.md#autoloading
 require __DIR__ . '/vendor/autoload.php';
 
-// http://symfony.com/doc/current/components/yaml/introduction.html#reading-yaml-files
+use dashpit\config;
 use Symfony\Component\Yaml\Yaml;
 use Symfony\Component\Yaml\Exception\ParseException;
 
-try {
-    $values = Yaml::parse(file_get_contents('links.yml'));
-} catch (ParseException $e) {
-    printf("Unable to parse the YAML string: %s", $e->getMessage());
-}
+// load config
+$config = new config();
+$settings = $config->getConfig('config.yml');
+$theme_directory = $settings['theme'];
+// get data
+$parsed_linklist = $config->getConfig('links.yml');
 
+// initialize presentation layer
+$loader = new Twig_Loader_Filesystem($theme_directory, 'templates');
+$loader->addPath($theme_directory);
+$twig = new Twig_Environment($loader, array(
+   // 'cache' => 'compilation_cache',
+));
 
-// http://stackoverflow.com/questions/11300658/making-a-list-of-links-with-php
-echo '<ul>';
-foreach($values as $k => $v) {
-  echo '<li >';
-  echo '<a href="//' . $v . '">' . $k . '</a>';
-  echo '</li >';
-}
-echo '</ul>';
-
-
+echo $twig->render('index.html', array(
+    'sitename' => 'dashpit',
+    'linklist' => $parsed_linklist
+));
 // Debug
-//echo 'DEBUG:';
-//var_dump($values);
+echo 'DEBUG:';
+var_dump($settings);
 
 ?>

@@ -1,7 +1,24 @@
 {
-    "name": "buddy/dashpit",
+    "name": "discipolo/dashpit",
     "description": "dashboard for links",
     "require": {
-        "symfony/yaml": "^3.1"
+        "symfony/yaml": "^3.1",
+        "friendly/dashpit_library": "dev-master",
+        "twig/twig": "~1.0"
+    },
+    "repositories": [{
+        "type": "vcs",
+        "url": "https://github.com/discipolo/dashpit_library.git"
+    }],
+    "config": {
+        "bin-dir": "bin/"
+    },
+    "require-dev": {
+        "behat/behat": "^3.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "dashpit\\":"src/"
+        }
     }
 }

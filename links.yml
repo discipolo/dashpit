@@ -1,3 +1,9 @@
-github: github.com
-trello: trello.com
-google: google.com
+github:
+  caption: github
+  url: github.com
+trello:
+  caption: trello
+  url: trello.com
+google:
+  caption: google
+  url: google.com
