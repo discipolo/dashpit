@@ -1,6 +1,6 @@
 {
   "name": "dashpit",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "main dashpit repo",
   "main": "index.php",
   "scripts": {
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/discipolo/dashpit#readme",
   "dependencies": {
-    "dashpit-foundation-theme": "file:///mnt/MODATA/05-START/experiments/dashpit/_CODENV/_WORCLONES/dashpit_foundation_theme"
+    "dashpit-foundation-theme": "git@github.com:discipolo/dashpit_foundation_theme.git"
   }
 }
