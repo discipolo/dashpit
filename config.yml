@@ -1,4 +1,1 @@
-links:
-# add links in the format title: url
-  github: github.com
-  trello: trello.org
+theme: node_modules/dashpit-foundation-theme

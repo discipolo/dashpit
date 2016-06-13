@@ -1,16 +1,23 @@
 
 <?php
-
-# //https://getcomposer.org/doc/01-basic-usage.md#autoloading
+// Autoload dependencies
+// https://getcomposer.org/doc/01-basic-usage.md#autoloading
 require __DIR__ . '/vendor/autoload.php';
 
+use dashpit\config;
+use Symfony\Component\Yaml\Yaml;
+use Symfony\Component\Yaml\Exception\ParseException;
 
-use dashpit\LinkList;
-//TODO: configure linklist source, possibly as constant
-$linklistobject = new LinkList('links.yml');
-$parsed_linklist = $linklistobject->getLinkList();
+// load config
+$config = new config();
+$settings = $config->getConfig('config.yml');
+$theme_directory = $settings['theme'];
+// get data
+$parsed_linklist = $config->getConfig('links.yml');
 
-$loader = new Twig_Loader_Filesystem('templates');
+// initialize presentation layer
+$loader = new Twig_Loader_Filesystem($theme_directory, 'templates');
+$loader->addPath($theme_directory);
 $twig = new Twig_Environment($loader, array(
    // 'cache' => 'compilation_cache',
 ));
@@ -20,7 +27,7 @@ echo $twig->render('index.html', array(
     'linklist' => $parsed_linklist
 ));
 // Debug
-//echo 'DEBUG:';
-//var_dump($parsed_linklist);
+echo 'DEBUG:';
+var_dump($settings);
 
 ?>
