@@ -1,9 +1,9 @@
 github:
   caption: github
-  url: github.com
+  href: http://github.com
 trello:
   caption: trello
-  url: trello.com
+  href: http://trello.com
 google:
   caption: google
-  url: google.com
+  href: http://google.com
