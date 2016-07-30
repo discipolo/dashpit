@@ -1,1 +1,8 @@
 theme: node_modules/dashpit-foundation-theme
+linklists:
+  default:
+    template: default
+    source: ./links.yml
+  other:
+    template: default
+    source: ./links.yml
