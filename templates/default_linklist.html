@@ -9,7 +9,7 @@
 
 <ul id="linklist">
     {% for item in linklist %}
-    <li><a href="{{ item.href }}">{{ item.caption }}</a></li>
+    <li>{{ item.title }} {{ item.name }}<a href="{{ item.href }}"> {{ item.id }} - {{ item.caption }}</a></li>
     {% endfor %}
 </ul>
 

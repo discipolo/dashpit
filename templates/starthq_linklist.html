@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ sitename }}</title>
+</head>
+<body>
+<h2>{{ listsource }}</h2>
+
+
+<ul id="linklist">
+    {% set list = linklist[envelope][0] %}
+    {% for item in list %}
+    <li>{{ item.title }}
+        <a href="{{ item.url }}"> {{ item.name }} - {{ item.caption }}</a>
+        <p>{{ item.note  }}</p>
+    </li>
+    {% endfor %}
+</ul>
+
+
+
+
+</body>
+</html>

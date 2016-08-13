@@ -1,8 +1,14 @@
-theme: node_modules/dashpit-foundation-theme
+theme: ../node_modules/dashpit-foundation-theme
 linklists:
-  default:
+  crushpaper:
+    template: crushpaper
+    envelope: entries
+    source: /crushpaper-backup-2016-07-30-18-09-38.json
+  wallabag:
     template: default
-    source: ./links.yml
-  other:
-    template: default
-    source: ./links.yml
+    envelope: ''
+    source: /wallabag-export-3-2016-07-30.json
+  starthq:
+    template: starthq
+    envelope: items
+    source: /starthq-export.json
